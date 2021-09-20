@@ -15,7 +15,7 @@
     "lib/**"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "shx rm -rf lib/ && tsc",
     "prepublishOnly": "npm run build",
     "mocha": "mocha test/",
     "pretest": "npm run build",
@@ -45,6 +45,7 @@
     "@types/lodash.has": "^4.5.6",
     "mocha": "^9.1.1",
     "regenerator-runtime": "^0.13.9",
+    "shx": "^0.3.3",
     "typescript": "^4.4.3"
   },
   "engines": {
